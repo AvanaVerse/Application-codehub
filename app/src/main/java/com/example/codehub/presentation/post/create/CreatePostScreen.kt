@@ -32,15 +32,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.codehub.R
-import com.example.codehub.presentation.components.buttons.PrimaryButton
-import com.example.codehub.presentation.components.buttons.SecondaryButton
-import com.example.codehub.presentation.components.chips.SelectableChip
-import com.example.codehub.presentation.components.fields.FormTextField
-import com.example.codehub.presentation.components.fields.MultilineTextField
+import com.example.ds.designsystem.components.buttons.PrimaryButton
+import com.example.ds.designsystem.components.buttons.SecondaryButton
+import com.example.ds.designsystem.components.chips.SelectableChip
+import com.example.ds.designsystem.components.fields.FormTextField
+import com.example.ds.designsystem.components.fields.MultilineTextField
 import com.example.codehub.presentation.post.create.CreatePostAction.ContentChanged
 import com.example.codehub.presentation.post.create.CreatePostAction.TagToggled
 import com.example.codehub.presentation.post.create.CreatePostAction.TitleChanged
-import com.example.codehub.presentation.theme.MyApplicationTheme
+import com.example.ds.designsystem.theme.DesignSystemTheme
 
 @Composable
 fun CreatePostScreen(
@@ -196,7 +196,7 @@ fun CreatePostScreen(
 @Preview(showBackground = true, backgroundColor = 0xFFF5F6FA, widthDp = 390)
 @Composable
 private fun CreatePostScreenPreview() {
-    MyApplicationTheme {
+    DesignSystemTheme {
         CreatePostScreen(
             state = CreatePostUiState(),
             onAction = {}

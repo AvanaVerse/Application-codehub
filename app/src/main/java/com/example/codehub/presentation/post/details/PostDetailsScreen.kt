@@ -17,8 +17,12 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.AutoAwesome
+import androidx.compose.material.icons.outlined.Code
 import androidx.compose.material.icons.outlined.CheckCircle
 import androidx.compose.material.icons.outlined.ChatBubbleOutline
+import androidx.compose.material.icons.outlined.Groups
+import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -40,13 +44,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.codehub.R
-import com.example.codehub.presentation.components.BottomNavigation
-import com.example.codehub.presentation.components.PostCard
-import com.example.codehub.presentation.components.SearchBar
-import com.example.codehub.presentation.components.TopBar
-import com.example.codehub.presentation.components.buttons.BackButton
-import com.example.codehub.presentation.components.buttons.PrimaryButton
-import com.example.codehub.presentation.theme.MyApplicationTheme
+import com.example.ds.designsystem.components.BottomNavigation
+import com.example.ds.designsystem.components.BottomNavigationItem
+import com.example.ds.designsystem.components.PostCard
+import com.example.ds.designsystem.components.SearchBar
+import com.example.ds.designsystem.components.TopBar
+import com.example.ds.designsystem.components.buttons.BackButton
+import com.example.ds.designsystem.components.buttons.PrimaryButton
+import com.example.ds.designsystem.theme.DesignSystemTheme
 
 @Composable
 fun PostDetailsScreen(
@@ -62,15 +67,28 @@ fun PostDetailsScreen(
         containerColor = Color(0xFFF5F6FA),
         topBar = {
             Column {
-                TopBar(modifier = Modifier.statusBarsPadding())
+                TopBar(
+                    appName = stringResource(R.string.app_name),
+                    modifier = Modifier.statusBarsPadding()
+                )
                 SearchBar(
                     query = searchQuery,
-                    onQueryChange = { searchQuery = it }
+                    onQueryChange = { searchQuery = it },
+                    placeholder = stringResource(R.string.search_placeholder)
                 )
             }
         },
         bottomBar = {
-            BottomNavigation(selectedIndex = 0)
+            BottomNavigation(
+                items = listOf(
+                    BottomNavigationItem(stringResource(R.string.feed), Icons.Outlined.Home),
+                    BottomNavigationItem(stringResource(R.string.communities), Icons.Outlined.Groups),
+                    BottomNavigationItem(stringResource(R.string.chat_ai), Icons.Outlined.AutoAwesome),
+                    BottomNavigationItem(stringResource(R.string.analyze_code), Icons.Outlined.Code)
+                ),
+                selectedIndex = 0,
+                onItemSelected = {}
+            )
         }
     ) { innerPadding ->
         Column(
@@ -221,7 +239,7 @@ private fun ResponseComposer(
 @Preview(showBackground = true, backgroundColor = 0xFFF5F6FA, widthDp = 393, heightDp = 852)
 @Composable
 private fun PostDetailsScreenPreview() {
-    MyApplicationTheme {
+    DesignSystemTheme {
         PostDetailsScreen()
     }
 }

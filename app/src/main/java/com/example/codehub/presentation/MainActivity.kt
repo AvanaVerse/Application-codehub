@@ -11,14 +11,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.codehub.presentation.theme.MyApplicationTheme
+import com.example.ds.designsystem.theme.DesignSystemTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyApplicationTheme {
+            DesignSystemTheme {
                 EmptyScreen()
             }
         }
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun EmptyScreenPreview() {
-    MyApplicationTheme {
+    DesignSystemTheme {
         EmptyScreen()
     }
 }

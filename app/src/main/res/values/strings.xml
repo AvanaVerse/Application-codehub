@@ -41,4 +41,36 @@
     <string name="community_card_tag_language">Kotlin</string>
     <string name="community_card_tag_level">Iniciantes</string>
     <string name="community_card_action">Abrir conversa</string>
+
+    <string name="login_title">Entrar</string>
+    <string name="login_subtitle">Use seu e-mail ou continue com o Google.</string>
+    <string name="login_placeholder_email">Digite seu e-mail</string>
+    <string name="login_placeholder_password">Digite sua senha</string>
+    <string name="login_label_email">E-mail</string>
+    <string name="login_label_password">Senha</string>
+    <string name="login_button">Entrar</string>
+    <string name="login_button_google">Entrar com Google</string>
+    <string name="login_divider">ou use seu e-mail</string>
+    <string name="login_forgot_password">Esqueci Minha Senha</string>
+    <string name="login_terms">Ao continuar, você concorda com nossos Termos de uso e Política de privacidade.</string>
+    <string name="login_no_account">Ainda não tem conta?</string>
+    <string name="login_create_account">Criar Conta</string>
+
+    <string name="register_title">Crie sua conta</string>
+    <string name="register_subtitle">Use seu e-mail para começar.</string>
+    <string name="register_button_google">Continuar com Google</string>
+    <string name="register_divider">ou use seu e-mail</string>
+    <string name="register_label_name">Nome</string>
+    <string name="register_placeholder_name">Como você quer ser chamado?</string>
+    <string name="register_label_email">E-mail</string>
+    <string name="register_placeholder_email">voce@exemplo.com</string>
+    <string name="register_label_password">Senha</string>
+    <string name="register_placeholder_password">Crie uma senha</string>
+    <string name="register_password_hint">8+ caracteres, com letras e números.</string>
+    <string name="register_terms">Li e aceito os Termos e a Política de privacidade.</string>
+    <string name="register_button">Criar minha conta</string>
+    <string name="register_already_account">Já tem uma conta?</string>
+    <string name="register_label_confirm_password">Confirmar senha</string>
+    <string name="register_placeholder_confirm_password">Digite sua senha novamente</string>
+    <string name="register_login">Entrar</string>
 </resources>

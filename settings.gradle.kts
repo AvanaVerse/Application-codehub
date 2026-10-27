@@ -24,4 +24,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "CodeHub"
 include(":app")
+include(":designsystem")
+project(":designsystem").projectDir = file("Ds/designsystem")
  
